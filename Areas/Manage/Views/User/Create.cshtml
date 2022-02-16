@@ -16,17 +16,17 @@
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
         <div class="control">
-            <input asp-for="FullName" type="text" placeholder=" " class="control_input">
+            <input required asp-for="FullName" type="text" placeholder=" " class="control_input">
             <label asp-for="FullName" class="control_label"></label>
             <span asp-validation-for="FullName" class="control_error-label"></span>
         </div>
         <div class="control">
-            <input asp-for="UserName" type="text" placeholder=" " class="control_input">
+            <input required asp-for="UserName" type="text" placeholder=" " class="control_input">
             <label asp-for="UserName" class="control_label"></label>
             <span asp-validation-for="UserName" class="control_error-label"></span>
         </div>
            <div class="control">
-            <input name="password" required type="text" placeholder=" " class="control_input">
+            <input required name="password" required type="text" placeholder=" " class="control_input">
             <label class="control_label">Password</label>
             <span  class="control_error-label"></span>
         </div>

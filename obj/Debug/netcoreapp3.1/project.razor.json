@@ -1,5 +1,5 @@
 {
-  "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\ASMMAIN.csproj",
+  "FilePath": "d:\\Study\\net104\\net104\\ASMMAIN.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14402,208 +14402,208 @@
   "RootNamespace": "ASMMAIN",
   "Documents": [
     {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Views\\Account\\signin.cshtml",
-      "TargetPath": "Views\\Account\\signin.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Manage\\Views\\User\\Index.cshtml",
-      "TargetPath": "Areas\\Manage\\Views\\User\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Views\\Shared\\_Layoutmanage.cshtml",
-      "TargetPath": "Views\\Shared\\_Layoutmanage.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Manage\\Views\\Product\\Details.cshtml",
-      "TargetPath": "Areas\\Manage\\Views\\Product\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Manage\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Areas\\Manage\\Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Database\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Areas\\Database\\Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Manage\\Views\\User\\Create.cshtml",
-      "TargetPath": "Areas\\Manage\\Views\\User\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Manage\\Views\\Account\\Index.cshtml",
-      "TargetPath": "Areas\\Manage\\Views\\Account\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Views\\Shared\\_AlertTemp.cshtml",
-      "TargetPath": "Views\\Shared\\_AlertTemp.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Views\\Account\\signup.cshtml",
-      "TargetPath": "Views\\Account\\signup.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Views\\Account\\AccessDenied.cshtml",
-      "TargetPath": "Views\\Account\\AccessDenied.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Manage\\Views\\Category\\Details.cshtml",
-      "TargetPath": "Areas\\Manage\\Views\\Category\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Manage\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Areas\\Manage\\Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Views\\Account\\notifyEmail.cshtml",
-      "TargetPath": "Views\\Account\\notifyEmail.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Views\\Shared\\_AlertView.cshtml",
-      "TargetPath": "Views\\Shared\\_AlertView.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Manage\\Views\\Role\\Index.cshtml",
-      "TargetPath": "Areas\\Manage\\Views\\Role\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Database\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Areas\\Database\\Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Manage\\Views\\Product\\Delete.cshtml",
-      "TargetPath": "Areas\\Manage\\Views\\Product\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Manage\\Views\\Category\\Index.cshtml",
-      "TargetPath": "Areas\\Manage\\Views\\Category\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Manage\\Views\\User\\Delete.cshtml",
-      "TargetPath": "Areas\\Manage\\Views\\User\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Database\\Views\\DbManage\\Index.cshtml",
-      "TargetPath": "Areas\\Database\\Views\\DbManage\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Views\\Account\\ConfirmEmail.cshtml",
-      "TargetPath": "Views\\Account\\ConfirmEmail.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Manage\\Views\\Category\\Edit.cshtml",
-      "TargetPath": "Areas\\Manage\\Views\\Category\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Manage\\Views\\Product\\Edit.cshtml",
-      "TargetPath": "Areas\\Manage\\Views\\Product\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Views\\Account\\ErrorConfirmEmail.cshtml",
-      "TargetPath": "Views\\Account\\ErrorConfirmEmail.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Manage\\Views\\Category\\Delete.cshtml",
-      "TargetPath": "Areas\\Manage\\Views\\Category\\Delete.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Views\\Shared\\_BootStrapPartial.cshtml",
+      "FilePath": "d:\\Study\\net104\\net104\\Views\\Shared\\_BootStrapPartial.cshtml",
       "TargetPath": "Views\\Shared\\_BootStrapPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Manage\\Views\\Product\\Index.cshtml",
-      "TargetPath": "Areas\\Manage\\Views\\Product\\Index.cshtml",
+      "FilePath": "d:\\Study\\net104\\net104\\Areas\\Manage\\Views\\User\\Delete.cshtml",
+      "TargetPath": "Areas\\Manage\\Views\\User\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Manage\\Views\\Shared\\_AlertView.cshtml",
-      "TargetPath": "Areas\\Manage\\Views\\Shared\\_AlertView.cshtml",
+      "FilePath": "d:\\Study\\net104\\net104\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Manage\\Views\\User\\Details.cshtml",
-      "TargetPath": "Areas\\Manage\\Views\\User\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Views\\Shared\\_LoginPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_LoginPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Manage\\Views\\Product\\Create.cshtml",
-      "TargetPath": "Areas\\Manage\\Views\\Product\\Create.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Manage\\Views\\User\\Edit.cshtml",
-      "TargetPath": "Areas\\Manage\\Views\\User\\Edit.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Manage\\Views\\Category\\Create.cshtml",
+      "FilePath": "d:\\Study\\net104\\net104\\Areas\\Manage\\Views\\Category\\Create.cshtml",
       "TargetPath": "Areas\\Manage\\Views\\Category\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Views\\_ViewImports.cshtml",
+      "FilePath": "d:\\Study\\net104\\net104\\Areas\\Manage\\Views\\Product\\Create.cshtml",
+      "TargetPath": "Areas\\Manage\\Views\\Product\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Views\\Account\\notifyEmail.cshtml",
+      "TargetPath": "Views\\Account\\notifyEmail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Areas\\Manage\\Views\\Product\\Details.cshtml",
+      "TargetPath": "Areas\\Manage\\Views\\Product\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Views\\Shared\\_LoginPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_LoginPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Areas\\Manage\\Views\\User\\Details.cshtml",
+      "TargetPath": "Areas\\Manage\\Views\\User\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Areas\\Manage\\Views\\Category\\Delete.cshtml",
+      "TargetPath": "Areas\\Manage\\Views\\Category\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Views\\Account\\signin.cshtml",
+      "TargetPath": "Views\\Account\\signin.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Areas\\Manage\\Views\\Role\\Index.cshtml",
+      "TargetPath": "Areas\\Manage\\Views\\Role\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Views\\Shared\\Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Views\\Account\\signup.cshtml",
+      "TargetPath": "Views\\Account\\signup.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Views\\Shared\\_AlertView.cshtml",
+      "TargetPath": "Views\\Shared\\_AlertView.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Views\\Account\\ErrorConfirmEmail.cshtml",
+      "TargetPath": "Views\\Account\\ErrorConfirmEmail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Areas\\Manage\\Views\\Product\\Delete.cshtml",
+      "TargetPath": "Areas\\Manage\\Views\\Product\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Areas\\Manage\\Views\\Product\\Index.cshtml",
+      "TargetPath": "Areas\\Manage\\Views\\Product\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Areas\\Manage\\Views\\User\\Index.cshtml",
+      "TargetPath": "Areas\\Manage\\Views\\User\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Views\\Shared\\_AlertTemp.cshtml",
+      "TargetPath": "Views\\Shared\\_AlertTemp.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Areas\\Database\\Views\\DbManage\\Index.cshtml",
+      "TargetPath": "Areas\\Database\\Views\\DbManage\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Areas\\Manage\\Views\\Category\\Index.cshtml",
+      "TargetPath": "Areas\\Manage\\Views\\Category\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Areas\\Manage\\Views\\User\\Create.cshtml",
+      "TargetPath": "Areas\\Manage\\Views\\User\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Areas\\Database\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Database\\Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Areas\\Manage\\Views\\Shared\\_AlertView.cshtml",
+      "TargetPath": "Areas\\Manage\\Views\\Shared\\_AlertView.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Views\\Account\\ConfirmEmail.cshtml",
+      "TargetPath": "Views\\Account\\ConfirmEmail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Areas\\Manage\\Views\\Category\\Details.cshtml",
+      "TargetPath": "Areas\\Manage\\Views\\Category\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Views\\Shared\\_Layoutmanage.cshtml",
+      "TargetPath": "Views\\Shared\\_Layoutmanage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Areas\\Database\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Database\\Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FilePath": "d:\\Study\\net104\\net104\\Areas\\Manage\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Manage\\Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Areas\\Manage\\Views\\Account\\Index.cshtml",
+      "TargetPath": "Areas\\Manage\\Views\\Account\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Views\\Account\\AccessDenied.cshtml",
+      "TargetPath": "Views\\Account\\AccessDenied.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Areas\\Manage\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Manage\\Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Areas\\Manage\\Views\\Product\\Edit.cshtml",
+      "TargetPath": "Areas\\Manage\\Views\\Product\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Areas\\Manage\\Views\\Category\\Edit.cshtml",
+      "TargetPath": "Areas\\Manage\\Views\\Category\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Views\\Home\\Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Study\\net104\\net104\\Areas\\Manage\\Views\\User\\Edit.cshtml",
+      "TargetPath": "Areas\\Manage\\Views\\User\\Edit.cshtml",
       "FileKind": "mvc"
     }
   ],

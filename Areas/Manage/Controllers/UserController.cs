@@ -8,10 +8,12 @@ using Microsoft.EntityFrameworkCore;
 using ASMMAIN;
 using ASMMAIN.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 namespace ASMMAIN.Areas.Controllers
 {
     [Area("manage")]
     [Route("/manage/user/[action]")]
+    [Authorize(Roles = RoleName.Administrator)]
     public class UserController : Controller
     {
         private readonly ShopContext _context;
@@ -31,6 +33,7 @@ namespace ASMMAIN.Areas.Controllers
         }
 
         [ViewData]
+        [TempData]
         public int num {get; set;} = 1;
 
         [TempData] 
@@ -82,10 +85,17 @@ namespace ASMMAIN.Areas.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(user);
-                await _context.SaveChangesAsync();
+             
+                if(user.FullName == null || user.UserName ==null || user.Email == null) { 
 
-                var InUser = new User { FullName = user.FullName , UserName = user.FullName , HomeAddress = user.HomeAddress , Email = user.Email , EmailConfirmed = user.EmailConfirmed , PhoneNumber = user.PhoneNumber , PhoneNumberConfirmed = user.PhoneNumberConfirmed }; 
+                    Message = "Thiếu các trường dữ liệu !" ; 
+                    MessageType = AlertModel.Type.success;
+                    TempData.Peek("Message");
+                    TempData.Peek("MessageType");
+                    
+                    return View(user) ;
+                }
+                var InUser = new User { FullName = user.FullName , UserName = user.UserName , HomeAddress = user.HomeAddress , Email = user.Email , EmailConfirmed = user.EmailConfirmed , PhoneNumber = user.PhoneNumber , PhoneNumberConfirmed = user.PhoneNumberConfirmed }; 
 
                 var result = await userManager.CreateAsync(InUser,password);
                 if(result.Succeeded){
@@ -137,8 +147,17 @@ namespace ASMMAIN.Areas.Controllers
             {
                 try
                 {
-                    _context.Update(user);
-                    await _context.SaveChangesAsync();
+                    // _context.Update(user);
+                    // await _context.SaveChangesAsync();
+                    var findUser = await userManager.FindByIdAsync(id);
+                    findUser.HomeAddress = user.HomeAddress ; 
+                    findUser.FullName = user.FullName; 
+                    findUser.UserName = user.UserName;
+                    findUser.Email = user.Email ; 
+                    findUser.EmailConfirmed = user.EmailConfirmed ; 
+                    findUser.PhoneNumber = user.PhoneNumber; 
+                    findUser.PhoneNumberConfirmed = user.PhoneNumberConfirmed; 
+                    await userManager.UpdateAsync(findUser);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
