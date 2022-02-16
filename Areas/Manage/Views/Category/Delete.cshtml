@@ -1,0 +1,30 @@
+@model ASMMAIN.Models.Category
+
+@{
+    ViewData["Title"] = "Delete";
+
+}
+
+<h1>Xóa sản phẩm</h1>
+
+<h3>Bạn có chắc muốn xóa sản phẩm này không?</h3>
+<div>
+    <h4>Danh mục</h4>
+    <hr />
+    <div class="grid">
+
+    <dl class="grid_row">
+        <dt class = "grid_column-2 label--info label--title label">
+            Tên sản phẩm
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.name)
+        </dd>
+    </dl>
+    </div>
+    
+    <form method="post" asp-action="DeleteConfirmed" asp-route-id="@Model.category_id">
+        <input type="submit" value="Delete" class="btn btn--danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

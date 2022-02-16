@@ -1,0 +1,86 @@
+@model ASMMAIN.Models.SignUpModel
+@{
+    ViewData["Title"] = "signup";
+}
+
+<link rel="stylesheet" href="/css/account.css">
+
+<body>
+    <div class="grid">
+        <div class="grid_row">
+            <div class="grid_column">
+                <div class="box-signup">
+                    <header class="signup_header">
+                        <div class="signup_header-wrap">
+                            <img class="signup_header-logo" src="/images/LEGO.png" alt="Logo">
+                            <h3 class="signup_header-label">Lego Pro</h3>
+                        </div>
+
+                        <div class="signup_pr">
+                            <img src="/images/panel1.jpg" alt="" class="signup_pr-img">
+                            <h4 class="signup_pr-label">Lego Pro đồ chơi giải trí, trưng bày đầy phong cách cho dân chơi
+                            </h4>
+                        </div>
+                    </header>
+
+                    <section class="signup_main">
+                        <div class="signup_main-header">
+                         
+                                <h3 class="signup_main-header-title">Đăng ký</h3>
+                                <a class="signup_main-header-desc">Bạn đã có tài khoản? <a asp-action="signin"
+                                    class="signup_main-tologin">Đăng
+                                        nhập</a></a>
+                            
+                        </div>
+                        <form  asp-controller ="Account" asp-action ="signup" method="post" asp-route-returnurl = "@ViewData["ReturnUrl"]" role="form" class="signup_controls">
+                               <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                <div class="control">
+                                    <input asp-for="FullName" type="text" placeholder=" " class="control_input">
+                                    <label asp-for="FullName" class="control_label"></label>
+                                    <span asp-validation-for="FullName" class = "control_error-label" ></span>
+                                </div>
+                                <div class="control">
+                                    <input asp-for="UserName" type="text" placeholder=" " class="control_input">
+                                    <label asp-for="UserName" class="control_label"></label>
+                                    <span asp-validation-for="UserName" class="control_error-label"></span>
+
+                                </div>
+                                <div class="control">
+                                    <input asp-for="Email" type="text" placeholder=" " class="control_input">
+                                    <label asp-for="Email" class="control_label"></label>
+                                    <span asp-validation-for="Email" class="control_error-label"></span>
+
+                                </div>
+                                <div class="control">
+                                    <input asp-for="Password" type="password" placeholder=" " class="control_input">
+                                    <label asp-for="Password" class="control_label"></label>
+                                    <span asp-validation-for="Password" class="control_error-label"></span>
+                                </div>
+                                <div class="control">
+                                    <input asp-for="ConfirmPassword" type="password" placeholder=" " class="control_input">
+                                    <label asp-for="ConfirmPassword" class="control_label"></label>
+                                    <span asp-validation-for="ConfirmPassword" class="control_error-label"></span>
+
+                                </div>
+                                <div class="control">
+                                    @await Html.PartialAsync("_AlertView")
+                                </div>
+                                <div class="control">
+                                    <button type="submit" class="btn btn--blue-light btn--size-l">Đăng Ký</button>
+                                </div>
+                        </form>
+                    </section>
+
+
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+

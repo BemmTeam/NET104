@@ -1,0 +1,36 @@
+@model IEnumerable<ASMMAIN.Models.Category>
+
+@{
+    ViewData["Title"] = "Index";
+
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Tạo danh mục mới</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Tên danh mục
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+         <td style="display: flex;">
+                <a class="btn btn--blue-dark btn--size-sm" asp-action="Edit" asp-route-id="@item.category_id">Edit</a> 
+                <a class="btn btn--blue-light btn--size-sm" asp-action="Details" asp-route-id="@item.category_id">Details</a> 
+                <a class="btn btn--danger btn--size-sm" asp-action="Delete" asp-route-id="@item.category_id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

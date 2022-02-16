@@ -1,0 +1,57 @@
+@model ASMMAIN.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+   <div class="grid">
+        <dl class="grid_row">
+        <dt class = "grid_column-2 label--info label--title label">
+            Tên sản phẩm
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.name)
+        </dd>
+        <dt class = "grid_column-2 label--info label--title label">
+            Giá
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.price)
+        </dd>
+        <dt class = "grid_column-2 label--info label--title label">
+            Số lượng
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.quantity)
+        </dd>
+        <dt class = "grid_column-2 label--info label--title label">
+            Mô tả
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.description)
+        </dd>
+        <dt class = "grid_column-2 label--info label--title label">
+            Hình ảnh 
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.image_url)
+        </dd>
+        <dt class = "grid_column-2 label--info label--title label">
+            Danh mục
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.category.name)
+        </dd>
+    </dl>
+   </div>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.product_id" class="btn btn--blue-dark">Edit</a>
+    <a asp-action="Index">Back to List</a>
+</div>

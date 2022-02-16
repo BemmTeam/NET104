@@ -1,0 +1,58 @@
+@model ASMMAIN.Models.Product
+
+@{
+    ViewData["Title"] = "Delete";
+
+}
+
+<h1>Xóa sản phẩm</h1>
+
+<h3>Bạn có chắc xóa sản phẩm này không</h3>
+<div>
+    <hr />
+   <div class="grid">
+        <dl class="grid_row">
+        <dt class = "grid_column-2 label--info label--title label">
+            Tên sản phẩm
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.name)
+        </dd>
+        <dt class = "grid_column-2 label--info label--title label">
+            Giá
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.price)
+        </dd>
+        <dt class = "grid_column-2 label--info label--title label">
+            Số lượng
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.quantity)
+        </dd>
+        <dt class = "grid_column-2 label--info label--title label">
+            Mô tả
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.description)
+        </dd>
+        <dt class = "grid_column-2 label--info label--title label">
+            Hình ảnh 
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.image_url)
+        </dd>
+        <dt class = "grid_column-2 label--info label--title label">
+            Danh mục
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.category.name)
+        </dd>
+    </dl>
+   </div>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="product_id" />
+        <input type="submit" value="Delete" class="btn btn--danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

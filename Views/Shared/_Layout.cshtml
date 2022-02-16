@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop Lego</title>
+    <!-- reset css -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+
+</head>
+
+<body>
+    <div class="main">
+        <!-- header -->
+        <header class="header">
+            <div class="header_wrap">
+                <div class="header_logo">
+                    <img src="/images/LEGO.png" alt="logo" class="header_logo-img" />
+                    <h1 class="header_logo-title">LEGO PRO</h1>
+                </div>
+                <div class="header_nav">
+                    <ul class="header_nav-list">
+                        <li class="header_nav-list-item">
+                            <a href="/">Trang chủ</a>
+                        </li>
+                        <li class="header_nav-list-item">
+                            <a href="#">Danh mục</a>
+                        </li>
+                        <li class="header_nav-list-item">
+                            <a href="#"> Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header_search">
+                    <input class="header_search-input" type="text" placeholder="Nhập sản phẩm bạn muốn tìm" />
+                    <i class="fa fa-search header_search-icon"></i>
+                </div>
+
+                <div class="header_groupuser">
+                    <div class="header_cart">
+                        <button class="header_cart-wrap">
+                            <i class="header_cart-icon fa fa-shopping-cart">
+                            </i>
+                            <div class="box-carts">
+                                <div class="carts-header">
+                                    <div class="carts-header_title">Sản phẩm đã thêm</div>
+                                    <div class="carts-header_count">3</div>
+                                </div>
+                                <div class="carts-body">
+                                    <ul class="products">
+                                        <li class="product-item">
+                                            <div class="product_img" style="
+                            background: url('https://product.hstatic.net/1000295686/product/92c58511-96e6-4209-b37a-c7a1a895d302_c0f01cafac7e42b5ac6e9ba65b3a0052_small.jpg')
+                              center center / contain no-repeat;">
+                                            </div>
+                                            <div class="product-body_info">
+                                                <div class="product-body_info-title">
+                                                    xin chào tất cả các bạn mình tên là thành nhaaaxin chào tất cả các
+                                                    bạn mình tên là thành nhaaa
+                                                </div>
+                                                <div class="product-body_info-wrap">
+                                                    <i class="product-body_info-icon fas fa-dollar-sign"></i>
+                                                    <span class="product-body_info-label">20.000 x
+                                                    </span>
+                                                    <span class="product-body_info-qty">3</span>
+
+                                                </div>
+                                            </div>
+                                            <i class="product-body_info-remove far fa-times-circle"></i>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="carts_preview-total">
+                                    <span class="carts_preview-total-label">Tổng tiền: </span>
+                                    <div class="product-body_info-price">
+                                        <i class="product-body_info-icon fas fa-dollar-sign"></i>
+                                        <span class="product-body_info-total">20.000</span>
+                                    </div>
+                                </div>
+                                <div class="carts_controls">
+                                    <a href="#" class="carts_cart-preview btn btn--blue-dark">Cập nhật</a>
+                                    <a href="#" class="carts_cart-pay btn btn--blue-light">Thanh toán</a>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="header_notify">
+                        <i class="header_cart-icon fa fa-bell"></i>
+                    </div>
+                </div>
+
+                <div class="header_user">
+                    @await Html.PartialAsync("_LoginPartial")
+                    @* <div class="header_user-name">Nguyễn Thành</div> *@
+                </div>
+                <!-- dang nhap dang ky -->
+                <!-- <div class="header_controls">
+                    <a href="#" class="header_controls-reg">Đăng ký</a>
+                    <a href="#" class="header_controls-reg">Đăng nhập</a>
+                </div> -->
+            </div>
+        </header>
+        <!-- end header -->
+        <!-- aside -->
+        <div class="main-body">
+            @RenderBody();
+        </div>
+        <!-- end aside -->
+        <!-- Footer  -->
+        <footer class="footer">
+            <div class="grid">
+                <div class="grid_row">
+                    <div class="grid_column-2-5">
+                        <h3 class="footer_heading">Chăm sóc khách hàng</h3>
+                        <ul class="footer_list">
+                            <li class="footer_item">
+                                <a href="" class="footer_item-link">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item-link">Lego Pro</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item-link">Hướng dẫn mua hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid_column-2-5">
+                        <h3 class="footer_heading">Giới thiệu</h3>
+                        <ul class="footer_list">
+                            <li class="footer_item">
+                                <a href="" class="footer_item-link">Về BemmTeam</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item-link">Tuyển dụng</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item-link">Điều khoản</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid_column-2-5">
+                        <h3 class="footer_heading">Danh mục</h3>
+                        <ul class="footer_list">
+                            <li class="footer_item">
+                                <a href="" class="footer_item-link">Lego chính hãng</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item-link">Lego Hot</a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item-link">Lego 2022</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid_column-2-5">
+                        <h3 class="footer_heading">Theo dõi</h3>
+                        <ul class="footer_list">
+                            <li class="footer_item">
+                                <a href="" class="footer_item-link">
+                                    <i class="footer_item-icon fab fa-facebook"></i> Facebook
+                                </a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item-link">
+                                    <i class="footer_item-icon fab fa-instagram"></i>Instagram
+                                </a>
+                            </li>
+                            <li class="footer_item">
+                                <a href="" class="footer_item-link">
+                                    <i class="footer_item-icon fab fa-linkedin"></i> Linkedin
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid_column-2-5">
+                        <h3 class="footer_heading">Vào cửa hàng</h3>
+                        <div class="footer_download">
+                            <img src="/images/qrcode.png" alt="QRCODE" class="footer_download-qr" />
+                            <div class="footer_download-apps">
+
+
+                                <a href="" class="footer_download-apps-link">
+                                    <img src="/images/ggplay.png" alt="ggplay" class="footer_download-apps-img" />
+                                </a>
+                                <a href="" class="footer_download-apps-link">
+                                    <img src="/images/appstore.png" alt="appstore" class="footer_download-apps-img" />
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer_bottom">
+
+                <div class="gird_row">
+                    <p class="footer_text">Bản quyền thuộc về Nguyễn Thành</p>
+                </div>
+            </div>
+        </footer>
+        <!-- end footer -->
+    </div>
+</body>
+
+</html>

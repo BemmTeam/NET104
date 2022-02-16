@@ -1,0 +1,73 @@
+@inject ShopContext dbcontext;
+@using Microsoft.EntityFrameworkCore;
+@{
+    ViewData["Title"] = "Trang quản lý database";
+    ViewData["num"] = 0;
+
+
+}
+@{
+    try
+    {
+        var connect = dbcontext.Database.GetDbConnection();
+        var dbname = connect.Database;
+        var can_connect = dbcontext.Database.CanConnect();
+        <div class="grid">
+            <div class="gird_row">
+                @if (@Model != null)
+                {
+                    <div class="alert">@Model.ToString()</div>
+
+                }
+                <h1>Thông tin</h1>
+
+                <h3>- Tên Database: @dbname</h3>
+                <h3>- Source: @connect.DataSource</h3>
+
+                @if (can_connect)
+                {
+                    @if (@TempData["Message"] != null)
+                    {
+                         @await Html.PartialAsync("_AlertTemp")
+
+
+                    }else{
+                        <h3 class="label label--success">Database đã tạo thành công thầy có thể xem các trang quản lí user và quản lý sản phẩm</h3>
+
+                    }
+                }
+                else
+                {
+                    <h3 class="label label--info">database @dbname chưa tạo thầy vui lòng tạo database</h3>
+                    <h2>Thầy vui lòng vào file appsettings.json để chỉnh sửa chuỗi kết nối</h2>
+                    <h2>Trong chuỗi kết nối thầy có thể đặt tên ngay trong chuỗi app sẽ tự động tạo ra tên database đó</h2>
+                }
+
+                <hr>
+                <div style="display: flex;justify-content: space-around;">
+                    <div class="control">
+                        <a class="btn btn--primary " asp-action="createDB" style="width:300px">Tạo database
+                        </a>
+                    </div>
+                       <div class="control">
+                        <a class="btn btn--secondary " asp-action="insertDB" style="width:300px">insert Dữ liệu mẫu
+                        </a>
+                    </div>
+                    <div class="control">
+                        <a class="btn btn--danger" asp-action="deleteDB" style="width:300px" >xóa database</a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    }
+    catch
+    {
+        <h3 class="alert">kết nối không được</h3>
+        <h2>Thầy vui lòng vào file appsettings.json để chỉnh sửa chuỗi kết nối trong phần value của "Shopcontext" : "chuoi"</h2>
+        <h2>Trong chuỗi kết nối thầy có thể đặt tên database ngay trong chuỗi app sẽ tự động tạo ra tên database đó</h2>
+        <h2>Data Source=localhost,14433;Initial Catalog=ShopLego;User ID=SA;Password=bemmteam123</h2>
+    }
+}

@@ -1,0 +1,56 @@
+@model ASMMAIN.Models.Product
+
+@{
+    ViewData["Title"] = "Edit";
+
+}
+
+<h1>Sửa sản phẩm </h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="product_id" />
+            <div class="control">
+                <input asp-for="name" class="control_input" placeholder=" " />
+                <label asp-for="name" class="control_label">Tên sản phẩm</label>
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="control">
+                <input asp-for="price" class="control_input" placeholder=" " />
+                <label asp-for="price" class="control_label">Giá</label>
+                <span asp-validation-for="price" class="text-danger"></span>
+            </div>
+            <div class="control">
+                <input asp-for="quantity" class="control_input" placeholder=" " />
+                <label asp-for="quantity" class="control_label">Số lượng</label>
+                <span asp-validation-for="quantity" class="text-danger"></span>
+            </div>
+            <div class="control">
+                <input asp-for="description" class="control_input" placeholder=" " />
+                <label asp-for="description" class="control_label">Mô tả</label>
+                <span asp-validation-for="description" class="text-danger"></span>
+            </div>
+            <div class="control">
+                <input asp-for="image_url" class="control_input" placeholder=" " />
+                <label asp-for="image_url" class="control_label">URL hình ảnh</label>
+                <span asp-validation-for="image_url" class="text-danger"></span>
+            </div>
+            <div class="control">
+                <select asp-for="category_id" class="control_input" placeholder=" " asp-items="ViewBag.category_id"></select>
+                <label asp-for="category_id" class="control_label">Danh mục</label>
+                <span asp-validation-for="category_id" class="text-danger"></span>
+            </div>
+            <div class="control">
+                <input type="submit" value="Save" class="btn btn--blue-light" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

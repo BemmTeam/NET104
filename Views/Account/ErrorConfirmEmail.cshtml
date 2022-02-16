@@ -1,0 +1,34 @@
+@{
+    ViewData["Title"] = "ConfirmEmail";
+}
+
+<style>
+
+    .box { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box_title { 
+        font-size: 3rem;
+        color: var(--danger)
+    }
+
+    .box_desc{ 
+        font-size: 1.4rem;
+    }
+
+</style>
+
+
+<div class="grid">
+    <div class="grid_row box">
+
+        <h1 class="box_title" style="color: orangered;">Không xác nhận được email</h1>
+        <p class="box_desc">Có vẽ bạn đã không xác thực được email vui lòng đăng ký mới hoặc liện hệ ad để giải quyết.</p>
+        <img class="image" src="/images/emailerror.png" alt="" style="width: 800px;">
+
+
+    </div>
+</div>

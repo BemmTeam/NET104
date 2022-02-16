@@ -1,0 +1,54 @@
+@model IEnumerable<ASMMAIN.Models.Product>
+
+@{
+    ViewData["Title"] = "Danh sách sản phẩm";
+}
+
+<h1>Danh sách sản phẩm</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn--blue-light">Tạo sản phẩm mới</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Tên sản phẩm
+            </th>
+            <th>
+                Giá
+            </th>
+            <th>
+                Số lượng
+            </th>
+            <th>
+                Mô tả
+            </th>
+        
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.description)
+            </td>
+            <td style="display: flex;">
+                <a class="btn btn--blue-dark btn--size-sm" asp-action="Edit" asp-route-id="@item.product_id">Edit</a> 
+                <a class="btn btn--blue-light btn--size-sm" asp-action="Details" asp-route-id="@item.product_id">Details</a> 
+                <a class="btn btn--danger btn--size-sm" asp-action="Delete" asp-route-id="@item.product_id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

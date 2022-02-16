@@ -1,0 +1,77 @@
+@model IEnumerable<ASMMAIN.Models.User>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Danh sách user</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn--blue-light">Thêm User mới</a>
+</p>
+
+<table class="table">
+    <div class="control" style="min-width: 1060px;">
+@await Html.PartialAsync("_AlertTemp")
+
+</div>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HomeAddress)
+            </th>
+     
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailConfirmed)
+            </th>
+   
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+        
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HomeAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+ 
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailConfirmed)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+ 
+     
+              <td style="display: flex;">
+                <a class="btn btn--blue-dark btn--size-sm" asp-action="Edit" asp-route-id="@item.Id">Edit</a> 
+                <a class="btn btn--blue-light btn--size-sm" asp-action="Details" asp-route-id="@item.Id">Details</a> 
+                <a class="btn btn--danger btn--size-sm" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

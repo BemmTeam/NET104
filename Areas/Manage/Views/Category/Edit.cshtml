@@ -1,0 +1,31 @@
+@model ASMMAIN.Models.Category
+
+@{
+    ViewData["Title"] = "Edit";
+
+}
+
+<h1>Chỉnh sửa danh mục</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" asp-action="Edit" asp-route-id = "@Model.category_id" asp-route-name = "@Model.name">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="category_id" />
+            <div class="control">
+                <input asp-for="name" class="control_input" />
+                <label  class="control_label">Tên danh mục</label>
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="control">
+                <input type="submit" value="Save" class="btn btn--blue-dark" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,28 @@
+@{
+    var message = TempData["Message"] as string;
+    var MessageType = TempData["MessageType"] as string;
+    MessageType ??= AlertModel.Type.success;
+    AlertModel alert = null;
+    if(message != null) { 
+        alert = new AlertModel(MessageType , message);
+    }
+
+}
+
+
+@if (alert != null)
+{
+
+    <div>
+        <div class="alert @alert.classType">
+
+            <div class="alert-icon">
+                <i class="@alert.icon"></i>
+            </div>
+            <div class="alert-body">
+                <p class="alert-desc">@alert.message</p>
+            </div>
+        </div>
+    </div>
+}
+

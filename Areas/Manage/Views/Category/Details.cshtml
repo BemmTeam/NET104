@@ -1,0 +1,26 @@
+@model ASMMAIN.Models.Category
+
+@{
+    ViewData["Title"] = "Details";
+
+}
+
+<h1>Chi tiết danh mục</h1>
+
+<div>
+    <hr />
+   <div class="grid">
+     <dl class="grid_row">
+        <dt class = "grid_column-2 label--info label--title label">
+            Tên danh mục
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.name)
+        </dd>
+    </dl>
+   </div>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.category_id" class="btn btn--blue-dark">Edit</a>
+    <a asp-action="Index">Back to List</a>
+</div>
