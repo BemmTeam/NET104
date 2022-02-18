@@ -69,6 +69,9 @@ namespace ASMMAIN.Areas.Models
                 image_url = "sp6.jpg" , category_id = 5 },
                 
             };
+            foreach(Product item in products) { 
+                item.createdDate = System.DateTime.Now;
+            }
 
             dbcontext.AddRange(products);
             await dbcontext.SaveChangesAsync();

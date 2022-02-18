@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASMMAIN.Migrations
 {
     [DbContext(typeof(ShopContext))]
-    [Migration("20220212115440_AddDatabase")]
+    [Migration("20220217162117_AddDatabase")]
     partial class AddDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -116,6 +116,9 @@ namespace ASMMAIN.Migrations
 
                     b.Property<int>("category_id")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("createdDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("description")
                         .HasColumnType("ntext");

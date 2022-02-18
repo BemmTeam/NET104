@@ -70,6 +70,7 @@ namespace ASMMAIN.Migrations
                     name = table.Column<string>(type: "nvarchar(300)", nullable: false),
                     price = table.Column<decimal>(type: "money", nullable: false),
                     quantity = table.Column<int>(nullable: false),
+                    createdDate = table.Column<DateTime>(nullable: false),
                     description = table.Column<string>(type: "ntext", nullable: true),
                     image_url = table.Column<string>(maxLength: 100, nullable: true),
                     category_id = table.Column<int>(nullable: false)

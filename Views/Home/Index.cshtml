@@ -1,34 +1,90 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@model List<ASMMAIN.Models.Product>
 
+    <link rel="stylesheet" href="/css/manage.css" />
 
+<link rel="stylesheet" href="~/css/product.css">
 
-<div class="grid">
-    <h1>Sản phẩm của asm 1 - PS16903 - Nguyễn Thành</h1>
+<body>
+    <div class="grid">
+        <div class="grid_row">
+            <div class="grid_column-3">
+                <h2>Danh mục</h2>
+                <hr>
+                <h2 class="label-category">Tất cả sản phẩm</h2>
+                <hr>
+                <nav class="category">
+                           
+                            @*  category-item-active *@
+                            <ul class="category-list">
+                               
+                             @* @foreach (var item in Model[])
+                             {
+                                  <li class="category-item">
+                                    <a href="/dbmanage" class="category-item_link">@item.category</a>
+                                </li>
+                             } *@
+                            </ul>
+                        </nav>
+            </div>
 
-    <dl class="grid_row">
-        <dt class="grid_column-2 label label--success label-title">Database</dt>
-        <dd class="grid_column-10 label label--white label--text-black">Vì em dùng ef code first để tạo database nên có
-            thể tạo database trực tiếp</dd>
-        <dd class="grid_column-10 label label--white label--text-black">Trước tiên thầy chỉnh trong file appsetting.json connecstring ->
-            "ShopContext" : Chuỗi kết nối tới sqlserver máy Thầy </dd>
-        <dd class="grid_column-10 label label--white label--text-black">Thầy để tên database trong chuỗi kết nối bất kì
-            app sẽ tự động tạo database tạo table và insert dữ liệu</dd>
-        <dd class="grid_column-10 label label--white label--text-black">Nhấn vào <a class="btn btn--blue-dark"
-                style="display: inline-block;" href="/dbmanage">Đây</a> để truy cập tạo database</dd>
+            <div class="grid_column-9">
+                <div class="grid_column-full">
+                    <h2>Sản phẩm</h2>
+                    <hr>
 
-        <dt class="grid_column-2 label label--success label-title">Header - footler </dt>
-        <dd class="grid_column-10 label label--white label--text-black">Đây là giao diện header - footer tự em làm </dd>
-        <dt class="grid_column-2 label label--success label-title">SignIn & SignUp</dt>
-        <dd class="grid_column-10 label label--white label--text-black">Giao diện đăng ký đăng nhập</dd>
+                </div>
+                <div class="grid_column-full ">
+                    <form action="/action_page.php">
+                     <div class="filter">
 
-        <dt class="grid_column-2 label label--success label-title">Quản lý user</dt>
-        <dd class="grid_column-10 label label--white label--text-black">Nhấn vào <a class="btn btn--blue-dark"
-                style="display: inline-block;" href="/manage/user">Đây</a> để truy cập trang quản lý user</dd>
-        <dt class="grid_column-2 label label--success label-title">Quản lý sản phẩm</dt>
-      <dd class="grid_column-10 label label--white label--text-black">Nhấn vào <a class="btn btn--blue-dark"
-                style="display: inline-block;" href="/manage/product">Đây</a> để truy cập trang quản lý sản phẩm</dd>
-
-    </dl>
-</div>
+                        <div class="filter_select">
+                            <select class="filter_select-input"  name="Order" id="Order">
+                                <option class="filter_select-option" value="volvo">Theo giá</option>
+                                <option class="filter_select-option" value="saab">Theo tên</option>
+                            </select>
+                        </div>
+                        <div class="filter_select">
+                            <select class="filter_select-input" name="Order" id="Order">
+                                <option class="filter_select-option" value="volvo">Tăng dần</option>
+                                <option class="filter_select-option" value="saab">Giảm dần</option>
+                            </select>
+                        </div>
+                     </div>
+                    <hr>
+                    </form>
+                </div>
+              
+                 @foreach (var item in Model)
+                 {
+                        <div class="grid_column-3 product_box">
+                       <a style="text-decoration: none;" href="">
+                         <div class="box">
+                            <div class="box_wrap-img">
+                                <img src="~/images/@item.image_url"
+                                    alt="" class="box_img">
+                                <div class="box_price">
+                                    <span>$</span>
+                                    <label class="box_price-title">@item.price</label>
+                                </div>
+                                 <div class="box_footer">
+                                <a class="box_btn" href="">Thêm vào giỏ</a>
+                            </div>
+                            </div>
+                            <div class="box_body">
+                                <div class="box_body-name">@item.name</div>
+                                @* <div class="box_body-saleoff">20%</div>
+                                    <p class="box_body-desc">thanh dep trai nhat the gioi lun a nha may ban oi co thich trai
+                                    dep thi lien he minh gap di nha nha nhaaaaaaaaaaa</p> *@
+                            </div>
+                           
+                        </div>
+                       </a>
+                    </div>
+                 }
+            </div>
+        </div>
+    </div>
+</body>

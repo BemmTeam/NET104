@@ -15,6 +15,10 @@
             <div id="manage" class="header_user-name">Hello @UserManager.GetUserName(User)!
             <div class="header_user-menu">
                 <ul class="header_user-menu-list">
+                    @if(User.IsInRole(RoleName.Administrator)){ 
+                    <li class="header_user-menu-item"><a asp-action="Index" asp-area="Database" asp-controller="Dbmanage">Vào trang quản lý</a></li>
+                        
+                    }
                     <li class="header_user-menu-item"><a asp-action="Index" asp-area="Manage" asp-controller="Account">Thông tin tài khoản</a></li>
                     <li class="header_user-menu-item"><a asp-action="Signout" asp-controller="Account" asp-route-returnUrl = "@Url.Action("Index", "Home", new { area = "" })">Đăng xuất</a></li>
                 </ul>

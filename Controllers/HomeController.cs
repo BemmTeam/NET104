@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ASMMAIN.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace ASMMAIN.Controllers
 {
@@ -13,14 +15,16 @@ namespace ASMMAIN.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ShopContext context;
+        public HomeController(ILogger<HomeController> logger , ShopContext _context)
         {
             _logger = logger;
+            context = _context;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            return View(await context.products.ToListAsync());
         }
 
         public IActionResult Privacy()

@@ -115,6 +115,9 @@ namespace ASMMAIN.Migrations
                     b.Property<int>("category_id")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("createdDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("description")
                         .HasColumnType("ntext");
 

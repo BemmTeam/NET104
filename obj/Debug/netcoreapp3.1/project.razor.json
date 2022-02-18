@@ -14407,6 +14407,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Study\\net104\\net104\\Views\\Product\\Index.cshtml",
+      "TargetPath": "Views\\Product\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Study\\net104\\net104\\Areas\\Manage\\Views\\User\\Delete.cshtml",
       "TargetPath": "Areas\\Manage\\Views\\User\\Delete.cshtml",
       "FileKind": "mvc"

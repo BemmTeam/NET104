@@ -1,6 +1,7 @@
 
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System;
 namespace ASMMAIN.Models
 {
     [Table("Product")]
@@ -19,11 +20,15 @@ namespace ASMMAIN.Models
         [Column(TypeName = "money")]
         [Required]
 
-        public decimal price { get; set; }
+        public float price { get; set; }
 
         [Required]
         public int quantity { get; set; }
 
+        [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        public DateTime createdDate {get;set;}
+ 
         [Column(TypeName = "ntext")]
         public string description { get; set; }
 

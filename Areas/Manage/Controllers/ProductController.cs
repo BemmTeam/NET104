@@ -71,6 +71,7 @@ namespace ASMMAIN.Areas.Controllers
         {
             if (ModelState.IsValid)
             {
+                product.createdDate = DateTime.Now;
                 _context.Add(product);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));

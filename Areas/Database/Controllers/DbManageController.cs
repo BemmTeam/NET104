@@ -95,7 +95,7 @@ namespace ASMMAIN.Areas.Controllers
         [Route("DbManage/deleteDB")]
         public async Task<IActionResult> DeleteDB()
         {
-            await signInManager.SignOutAsync();
+           await signInManager.SignOutAsync();
             var success = await dbcontext.Database.EnsureDeletedAsync();
             if(success) Message = "Xóa database thành công ! " ; 
             else { 
