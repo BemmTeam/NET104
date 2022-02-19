@@ -1,5 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    var categories = ViewData["categories"] as List<Category> ;
+
 }
 @model List<ASMMAIN.Models.Product>
 
@@ -19,13 +21,15 @@
                            
                             @*  category-item-active *@
                             <ul class="category-list">
-                               
-                             @* @foreach (var item in Model[])
+                                  <li class="category-item">
+                                    <a asp-action="index" asp-route-id=""  class="category-item_link">Tất cả sản phẩm</a>
+                                </li>
+                             @foreach (var item in categories)
                              {
                                   <li class="category-item">
-                                    <a href="/dbmanage" class="category-item_link">@item.category</a>
+                                    <a asp-action="Index" asp-route-id="@item.category_id" class="category-item_link">@item.name</a>
                                 </li>
-                             } *@
+                             }
                             </ul>
                         </nav>
             </div>
@@ -59,7 +63,7 @@
               
                  @foreach (var item in Model)
                  {
-                        <div class="grid_column-3 product_box">
+                    <div class="grid_column-3 product_box ">
                        <a style="text-decoration: none;" href="">
                          <div class="box">
                             <div class="box_wrap-img">
@@ -69,9 +73,7 @@
                                     <span>$</span>
                                     <label class="box_price-title">@item.price</label>
                                 </div>
-                                 <div class="box_footer">
-                                <a class="box_btn" href="">Thêm vào giỏ</a>
-                            </div>
+                            
                             </div>
                             <div class="box_body">
                                 <div class="box_body-name">@item.name</div>
@@ -80,10 +82,14 @@
                                     dep thi lien he minh gap di nha nha nhaaaaaaaaaaa</p> *@
                             </div>
                            
-                        </div>
-                       </a>
+                         </div>
+                        </a>
+                             <div class="box_footer">
+                                <button onclick="addCart('/images/@item.image_url','@item.name','@item.price' , '@item.product_id')" class="box_btn">Thêm vào giỏ</button>
+                            </div>
                     </div>
                  }
+                 <button>a</button>
             </div>
         </div>
     </div>

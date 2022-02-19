@@ -16,7 +16,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/base.css" />
     <link rel="stylesheet" href="/css/main.css" />
-
+    <script src="~/js/addToCart.js"></script>
 </head>
 
 <body>
@@ -54,30 +54,11 @@
                             <div class="box-carts">
                                 <div class="carts-header">
                                     <div class="carts-header_title">Sản phẩm đã thêm</div>
-                                    <div class="carts-header_count">3</div>
+                                    <div id="carts-header_count" class="carts-header_count">0</div>
                                 </div>
                                 <div class="carts-body">
-                                    <ul class="products">
-                                        <li class="product-item">
-                                            <div class="product_img" style="
-                            background: url('https://product.hstatic.net/1000295686/product/92c58511-96e6-4209-b37a-c7a1a895d302_c0f01cafac7e42b5ac6e9ba65b3a0052_small.jpg')
-                              center center / contain no-repeat;">
-                                            </div>
-                                            <div class="product-body_info">
-                                                <div class="product-body_info-title">
-                                                    xin chào tất cả các bạn mình tên là thành nhaaaxin chào tất cả các
-                                                    bạn mình tên là thành nhaaa
-                                                </div>
-                                                <div class="product-body_info-wrap">
-                                                    <i class="product-body_info-icon fas fa-dollar-sign"></i>
-                                                    <span class="product-body_info-label">20.000 x
-                                                    </span>
-                                                    <span class="product-body_info-qty">3</span>
-
-                                                </div>
-                                            </div>
-                                            <i class="product-body_info-remove far fa-times-circle"></i>
-                                        </li>
+                                    <ul id="productscarts" class="products">
+                                      
 
                                     </ul>
                                 </div>
@@ -85,7 +66,7 @@
                                     <span class="carts_preview-total-label">Tổng tiền: </span>
                                     <div class="product-body_info-price">
                                         <i class="product-body_info-icon fas fa-dollar-sign"></i>
-                                        <span class="product-body_info-total">20.000</span>
+                                        <span id="product-body_info-total" class="product-body_info-total">0</span>
                                     </div>
                                 </div>
                                 <div class="carts_controls">
@@ -94,6 +75,8 @@
                                 </div>
                             </div>
                         </button>
+                            <div id="carts_count" class="carts_count">0</div>
+
                     </div>
                     <div class="header_notify">
                         <i class="header_cart-icon fa fa-bell"></i>

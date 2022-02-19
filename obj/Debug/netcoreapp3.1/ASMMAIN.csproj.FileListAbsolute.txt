@@ -383,3 +383,4 @@ D:\Study\net104\net104\obj\Debug\netcoreapp3.1\ASMMAIN.dll
 D:\Study\net104\net104\obj\Debug\netcoreapp3.1\ASMMAIN.pdb
 D:\Study\net104\net104\obj\Debug\netcoreapp3.1\ASMMAIN.genruntimeconfig.cache
 D:\Study\net104\net104\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs
+D:\Hoc Hanh\C#4\Project\ASM\Project\ASMMAIN\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs

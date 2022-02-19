@@ -35,7 +35,7 @@
     background-color: #FEFEFF;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     border-radius: 4px;
-    min-height: 256px;
+    min-height: 329px;
 
 }
 .box_wrap-img{ 
@@ -89,15 +89,17 @@
 .product_box{
     margin-top: 20px;
     float: left;
+    width: 33.33%;
+    position: relative;
 }
 .box_footer{
     position: absolute;
-    bottom: -11px;
-    right: 10px;
+    bottom: 50px;
+    right: 15px;
 
 
 }
-.box:hover .box_btn{ 
+.product_box:hover .box_btn{ 
     display: block;
 }
 .box_btn {
@@ -115,8 +117,12 @@
 }
 .box_btn:hover{
     background-color: #23d2e2f8;
+    cursor: pointer;
 }
 
+.box_btn:active { 
+    background-color: aqua;
+}
 @keyframes btnHover {
     0%{ 
         transform: translateX(100%);
@@ -132,4 +138,8 @@
 
 .label-category{ 
     padding: 5px;
+}
+
+.box_link{
+    position: relative;
 }

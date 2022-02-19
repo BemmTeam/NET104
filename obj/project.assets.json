@@ -9509,19 +9509,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\BemmTeam\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Study\\net104\\net104\\ASMMAIN.csproj",
+      "projectUniqueName": "D:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\ASMMAIN.csproj",
       "projectName": "ASMMAIN",
-      "projectPath": "D:\\Study\\net104\\net104\\ASMMAIN.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\Study\\net104\\net104\\obj\\",
+      "projectPath": "D:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\ASMMAIN.csproj",
+      "packagesPath": "C:\\Users\\BemmTeam\\.nuget\\packages\\",
+      "outputPath": "D:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\BemmTeam\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9608,7 +9608,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -22,9 +22,18 @@ namespace ASMMAIN.Controllers
             context = _context;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? id)
         {
-            return View(await context.products.ToListAsync());
+            ViewData["categories"] = await context.categories.ToListAsync();
+
+            if(id == null) { 
+
+                 return View(await context.products.ToListAsync());
+
+            }else { 
+                var products = await context.products.Select(x => x).Where(x => x.category_id == id).ToListAsync();
+                return View(products);
+            }
         }
 
         public IActionResult Privacy()
