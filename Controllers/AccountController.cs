@@ -153,7 +153,7 @@ namespace ASMMAIN.Controllers
             code = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(code));
             var result = await userManager.ConfirmEmailAsync(user, code);
             if(result.Succeeded) { 
-                await signInManager.SignInAsync(user, isPersistent: true);
+                await signInManager.SignInAsync(user, isPersistent: false);
             }
             return View(result.Succeeded ? "ConfirmEmail" : "ErrorConfirmEmail");
          

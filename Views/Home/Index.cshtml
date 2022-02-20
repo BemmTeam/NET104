@@ -64,7 +64,7 @@
                  @foreach (var item in Model)
                  {
                     <div class="grid_column-3 product_box ">
-                       <a style="text-decoration: none;" href="">
+                       <a asp-action="detail" asp-route-id="@item.product_id" style="text-decoration: none;">
                          <div class="box">
                             <div class="box_wrap-img">
                                 <img src="~/images/@item.image_url"
@@ -85,7 +85,7 @@
                          </div>
                         </a>
                              <div class="box_footer">
-                                <button onclick="addCart('/images/@item.image_url','@item.name','@item.price' , '@item.product_id')" class="box_btn">Thêm vào giỏ</button>
+                                <a asp-action="Add" asp-controller="cart" asp-route-id="@item.product_id" onclick="addCart('/images/@item.image_url','@item.name','@item.price' , '@item.product_id')" class="box_btn">Thêm vào giỏ</a>
                             </div>
                     </div>
                  }

@@ -1,6 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System;
+using ASMMAIN.Models;
+using System.Collections.Generic;
 
 namespace ASMMAIN.Models
 {
@@ -24,5 +26,17 @@ namespace ASMMAIN.Models
 
         [ForeignKey("UserId")]
         public User user { get; set; }
+
+        [Column(TypeName = "Nvarchar(2000)")]
+        public string productList {get;set;}
+
+        public float total {get;set;}
+
+        [NotMapped]
+        
+        public List<CartItem> items {get;set;}
+
+
+
     }
 }

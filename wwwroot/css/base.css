@@ -241,7 +241,7 @@ textarea {
   line-height: 2rem;
   display: inline-block;
 }
-.text-danger {
+.text--danger {
   color: white;
   border-radius: 6px;
   padding: 10px;

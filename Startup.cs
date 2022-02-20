@@ -33,6 +33,7 @@ namespace ASMMAIN
             services.AddControllersWithViews();
             services.AddRazorPages();
 
+            services.AddSession(option => option.IdleTimeout = TimeSpan.FromMinutes(90));
             // dang ky dich vu ef 
             services.AddDbContext<ShopContext>(option =>
             {
@@ -118,7 +119,7 @@ namespace ASMMAIN
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
-
+            app.UseSession();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

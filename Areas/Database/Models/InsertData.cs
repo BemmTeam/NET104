@@ -37,9 +37,9 @@ namespace ASMMAIN.Areas.Models
 
 
             var products = new object[] {
-                new Product(){name= "DC Batman NO 14", price = 21000, quantity = 13, description = "sản phẩm làm bằng nhựa ABS an toàn không gây hại cho trẻ khi sử dụng",
+                new Product(){name= "DC Batman NO 14", price = 210000, quantity = 13, description = "sản phẩm làm bằng nhựa ABS an toàn không gây hại cho trẻ khi sử dụng",
                 image_url = "sp1.jpg" , category_id = 1 },
-                 new Product(){name= "DC Flash NO 3", price = 2000000, quantity = 32, description = "sản phẩm làm bằng nhựa ABS an toàn không gây hại cho trẻ khi sử dụng",
+                 new Product(){name= "DC Flash NO 3", price = 410000, quantity = 32, description = "sản phẩm làm bằng nhựa ABS an toàn không gây hại cho trẻ khi sử dụng",
                 image_url = "sp2.jpg" , category_id = 1 },
                 new Product(){name= "DC Sinestro NO 2", price = 190000, quantity = 21, description = "sản phẩm làm bằng nhựa ABS an toàn không gây hại cho trẻ khi sử dụng",
                 image_url = "sp3.jpg" , category_id = 1 },
@@ -49,7 +49,7 @@ namespace ASMMAIN.Areas.Models
                 image_url = "sp5.jpg" , category_id = 2 },
                 new Product(){name= "LEGO Ninjago 891838 Buffer Foil Pack Polybag", price = 130000, quantity = 100, description = "sản phẩm làm bằng nhựa ABS an toàn không gây hại cho trẻ khi sử dụng",
                 image_url = "sp6.jpg" , category_id = 2 },
-                new Product(){name= "Star Wars 31200 The Sith", price = 4210000, quantity = 30, description = "sản phẩm làm bằng nhựa ABS an toàn không gây hại cho trẻ khi sử dụng",
+                new Product(){name= "Star Wars 31200 The Sith", price = 421000, quantity = 30, description = "sản phẩm làm bằng nhựa ABS an toàn không gây hại cho trẻ khi sử dụng",
                 image_url = "sp7.jpg" , category_id = 3 },
                 new Product(){name= "Star Wars 75239 Action Battle Hoth Generator Attack", price = 790000, quantity = 65, description = "sản phẩm làm bằng nhựa ABS an toàn không gây hại cho trẻ khi sử dụng",
                 image_url = "sp8.jpg" , category_id = 3 },

@@ -1,0 +1,59 @@
+
+
+
+@{
+    var listCarts = ViewData["cart"] as List<CartItem>;
+    float total = ViewBag.total??= 0;
+}
+
+@if (listCarts != null)
+{
+    <script>
+        const num = document.getElementById("carts-header_count");
+            
+         num.innerText = "@ViewBag.sum";
+
+        const cartcount = document.getElementById("carts_count") ; 
+        cartcount.innerText = "@ViewBag.sum";
+  
+        
+
+    </script>
+    foreach (var item in listCarts)
+{
+       <li id="@item.product.product_id" class="product-item">
+                    <div class="product_img" style="
+                    background: url('/images/@item.product.image_url')
+                    center center / contain no-repeat;">
+                    </div>
+                    <div class="product-body_info">
+                        <div class="product-body_info-title">
+                            @item.product.name
+                        </div>
+                        <div class="product-body_info-wrap">
+                            <i class="product-body_info-icon fas fa-dollar-sign"></i>
+                            <span class="product-body_info-label">@item.product.price x
+                            </span>
+                            <span class="product-body_info-qty">@item.Quantity</span>
+            
+                        </div>
+                    </div>
+           
+                    <a asp-action="Remove" asp-controller="cart" asp-route-id="@item.product.product_id" onclick="removeElement('@item.product.product_id' , '@item.product.price')"  class="product-body_info-remove far fa-times-circle"></a>
+                </li>
+}
+}
+</div>
+                                <div class="carts_preview-total">
+                                    <span class="carts_preview-total-label">Tổng tiền: </span>
+                                    <div class="product-body_info-price">
+                                        <i class="product-body_info-icon fas fa-dollar-sign"></i>
+                                        <span name="total" id="product-body_info-total" class="product-body_info-total">@total</span>
+                                    </div>
+                                </div>
+                                     <div class="carts_controls">
+                                    <a asp-action="index" asp-controller="cart" class="carts_cart-pay btn--size-l btn btn--blue-light">Thanh toán</a>
+                                </div>
+                            </div>
+                        </button>
+                            <div id="carts_count" class="carts_count">@{var sum = ViewBag.sum??=0;<span>@sum</span>}</div>

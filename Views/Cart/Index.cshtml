@@ -1,0 +1,64 @@
+@{
+    ViewData["Title"] = "Giỏ hàng của tôi";
+    var user = ViewBag.user as User;
+}
+<style>
+    .col-md-8{
+        overflow-y: auto;
+    }
+</style>
+
+
+@model List<CartItem>
+<link rel="stylesheet" href="~/css/cart.css">
+@if (Model != null)
+{
+    <div class="container mt-5 p-3 rounded cart">
+    <div class="row no-gutters">
+        <div class="col-md-8">
+            <div class="product-details mr-2">
+                <div class="d-flex flex-row align-items-center"><i class="fa fa-long-arrow-left"></i><a asp-action="index" asp-controller="home" class="ml-2">Continue Shopping</a></div>
+                <hr>
+                <h6 class="mb-0">Shopping cart</h6>
+                <div class="d-flex justify-content-between"><span>You have @Model.Count() items in your cart</span>
+                  
+                </div>
+             
+             @foreach (var item in Model)
+             {
+                    <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
+                    <div class="d-flex flex-row"><img class="rounded" src="~/images/@item.product.image_url" width="40">
+                        <div class="ml-2"><h2 class="font-weight-bold d-block">@item.product.name</h2></div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center"><span class="d-block">@item.Quantity</span><span class="d-block ml-5 font-weight-bold">@item.product.price</span><i class="fa fa-trash-o ml-3 text-black-50"></i></div>
+                </div>
+             }
+                
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="payment-info">
+                @* <div class="d-flex justify-content-between align-items-center"><span>Card details</span><img class="rounded" src="https://i.imgur.com/WU501C8.jpg" width="30"></div><span class="type d-block mt-3 mb-1">Card type</span><label class="radio"> <input type="radio" name="card" value="payment" checked> <span><img width="30" src="https://img.icons8.com/color/48/000000/mastercard.png" /></span> </label>
+                <label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30" src="https://img.icons8.com/officel/48/000000/visa.png" /></span> </label>
+                <label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30" src="https://img.icons8.com/ultraviolet/48/000000/amex.png" /></span> </label>
+                <label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30" src="https://img.icons8.com/officel/48/000000/paypal.png" /></span> </label> *@
+                <h3>Thanh toán khi nhận hàng - @user.FullName</h3>
+                <div><label class="credit-card-label">Địa chỉ</label><input type="text" class="form-control credit-inputs" placeholder="Địa chỉ" value="@user.HomeAddress"></div>
+                <div><label class="credit-card-label">Thành phố</label><input type="text" class="form-control credit-inputs" placeholder="Bà Rịa Vũng Tàu"></div>
+                <div class="row">
+                    <div class="col-md-6"><label class="credit-card-label">Huyện</label><input type="text" class="form-control credit-inputs" placeholder="Châu đức"></div>
+                    <div class="col-md-6"><label class="credit-card-label">Số nhà</label><input type="text" class="form-control credit-inputs" placeholder="342"></div>
+                </div>
+                <hr class="line">
+                <div class="d-flex justify-content-between information"><span>Subtotal</span><span>$@ViewBag.total</span></div>
+                <div class="d-flex justify-content-between information"><span>Shipping</span><span>$2000</span></div>
+                <div class="d-flex justify-content-between information"><span>Total(Incl. taxes)</span><span>$@ViewBag.sumprice</span></div><a asp-action="SaveCart"  asp-route-totalprice= "@ViewBag.sumprice" class="btn btn-primary btn-block d-flex justify-content-between mt-3" type="button"><span>Đặt hàng<i class="fa fa-long-arrow-right ml-1"></i></span></a>
+            </div>
+        </div>
+    </div>
+</div>
+}
+else{
+
+    <h1 class="alert alert-danger">Giỏ hàng trống</h1>
+}

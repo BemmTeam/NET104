@@ -14417,6 +14417,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Views\\Home\\detail.cshtml",
+      "TargetPath": "Views\\Home\\detail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Manage\\Views\\Product\\Details.cshtml",
       "TargetPath": "Areas\\Manage\\Views\\Product\\Details.cshtml",
       "FileKind": "mvc"
@@ -14424,6 +14429,11 @@
     {
       "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Manage\\Views\\_ViewImports.cshtml",
       "TargetPath": "Areas\\Manage\\Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Views\\Cart\\Index.cshtml",
+      "TargetPath": "Views\\Cart\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14484,6 +14494,11 @@
     {
       "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Views\\Account\\notifyEmail.cshtml",
       "TargetPath": "Views\\Account\\notifyEmail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Views\\Shared\\_CartPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_CartPartial.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14569,6 +14584,11 @@
     {
       "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Areas\\Manage\\Views\\User\\Details.cshtml",
       "TargetPath": "Areas\\Manage\\Views\\User\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Hoc Hanh\\C#4\\Project\\ASM\\Project\\ASMMAIN\\Views\\Cart\\History.cshtml",
+      "TargetPath": "Views\\Cart\\History.cshtml",
       "FileKind": "mvc"
     },
     {

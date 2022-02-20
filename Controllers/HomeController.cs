@@ -24,6 +24,12 @@ namespace ASMMAIN.Controllers
 
         public async Task<IActionResult> Index(int? id)
         {
+             var carts = SessionHelper.GetObjectFormJson<List<CartItem>>(HttpContext.Session , "cart");
+              if(carts != null) { 
+                ViewBag.total = carts.Sum(x => x.product.price * x.Quantity);
+                ViewBag.sum = carts.Sum(x=> x.Quantity);
+            }
+            ViewData["cart"] = carts;
             ViewData["categories"] = await context.categories.ToListAsync();
 
             if(id == null) { 
@@ -45,6 +51,22 @@ namespace ASMMAIN.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+
+        public async Task<IActionResult> detail(int? id){ 
+            
+             var carts = SessionHelper.GetObjectFormJson<List<CartItem>>(HttpContext.Session , "cart");
+              if(carts != null) { 
+                ViewBag.total = carts.Sum(x => x.product.price * x.Quantity);
+                ViewBag.sum = carts.Sum(x=> x.Quantity);
+            }
+            ViewData["cart"] = carts;
+            if(id == null) {
+                return NotFound();
+            }else { 
+                return View(await context.products.FindAsync(id));
+            }
         }
     }
 }
