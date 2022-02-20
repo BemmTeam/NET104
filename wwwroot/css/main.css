@@ -161,7 +161,7 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 4px;
   display: none;
-  width: 300px;
+  width: 180px;
 }
 .header_user-menu a { 
   color: var(--text-color);
@@ -238,6 +238,7 @@
   max-width: 256px;
 
 }
+
 .product-body_info-title {
   line-height: 20px;
   color: var(--text-color);
@@ -263,6 +264,7 @@
   line-height: 60px;
   color: var(--subtext-color);
   margin: 0px 20px;
+  text-decoration: none;
 }
 .product-body_info-remove:hover {
   color: black;

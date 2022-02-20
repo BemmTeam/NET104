@@ -33,7 +33,6 @@ namespace ASMMAIN.Areas.Controllers
         }
 
         [ViewData]
-        [TempData]
         public int num {get; set;} = 1;
 
         [TempData] 
@@ -102,7 +101,7 @@ namespace ASMMAIN.Areas.Controllers
 
                     Message = "Thêm User mới thành công";   
                     MessageType = AlertModel.Type.success;
-                  return RedirectToAction(nameof(Index) , result.Succeeded);
+                  return RedirectToAction(nameof(Index));
 
                 }
                 else { 

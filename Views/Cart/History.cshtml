@@ -6,7 +6,7 @@
     }
 }
 
-@model List<Cart>
+@model List<ASMMAIN.Models.Cart>
 
 
 <link rel="stylesheet" href="~/css/cart.css">
@@ -57,12 +57,12 @@
                 <h4>Tên khách hàng: <span class="text text-info">@ViewBag.fullname</span></h4>
 
                 <h4>Ngày đặt hàng: <span class="text text-info">@item.created_date</span></h4>
-                @if (@item.status)
+                @if (!@item.status)
                 {
                   <h4>Trạng thái: <span class="text text-danger">Chưa hoàn thành</span></h4>
 
                 }else{
-                  <h4>Trạng thái: <span class="text text-sucess">Đã hoàn thành</span></h4>
+                  <h4>Trạng thái: <span class="text text-success">Đã hoàn thành</span></h4>
 
                 }
                 <hr class="line">

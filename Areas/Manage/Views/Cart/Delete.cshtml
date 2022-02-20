@@ -1,0 +1,50 @@
+@model ASMMAIN.Models.Cart
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Bạn có chắc muốn xoá?</h3>
+<div class="grid">
+    <hr />
+    <dl class="row">
+        <dt class = "grid_column-2 label--info label--title label">
+            @Html.DisplayNameFor(model => model.created_date)
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.created_date)
+        </dd>
+        <dt class = "grid_column-2 label--info label--title label">
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.status)
+        </dd>
+        <dt class = "grid_column-2 label--info label--title label">
+            @Html.DisplayNameFor(model => model.user)
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.user.Id)
+        </dd class>
+        <dt class = "grid_column-2 label--info label--title label">
+            @Html.DisplayNameFor(model => model.productList)
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.productList)
+        </dd>
+        <dt class = "grid_column-2 label--info label--title label">
+            @Html.DisplayNameFor(model => model.total)
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.total)
+        </dd>
+    </dl>
+    
+    <form method="post" asp-action="DeleteConfirmed" asp-route-id = "@Model.cart_id">
+        <input type="hidden" asp-for="cart_id" />
+        <input type="submit" value="Delete" class="btn btn--danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

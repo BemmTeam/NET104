@@ -1,0 +1,50 @@
+@model ASMMAIN.Models.Cart
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Sửa hoá đơn</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <h2>@Model.created_date
+
+        </h2>
+        <form method="post" asp-action="Edit" asp-route-id = "@Model.cart_id">
+            <div asp-validation-summary="ModelOnly" class="text--danger"></div>
+            <input type="hidden" asp-for="cart_id" />
+            <input type="hidden" asp-for="created_date" value="@Model.created_date" />
+
+            <div class="control form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="status" /> Đã hoàn tất đơn hàng
+                </label>
+            </div>
+            <div class="control">
+                <select asp-for="UserId" class="control_input" asp-items="ViewBag.UserId"></select>
+                <label asp-for="UserId" class="control_label"></label>
+                <span asp-validation-for="UserId" class="text--danger"></span>
+            </div>
+            <div class="control">
+                <input asp-for="productList" class="control_input" />
+                <label asp-for="productList" class="control_label"></label>
+                <span asp-validation-for="productList" class="text--danger"></span>
+            </div>
+            <div class="control">
+                <input asp-for="total" class="control_input" />
+                <label asp-for="total" class="control_label"></label>
+                <span asp-validation-for="total" class="text--danger"></span>
+            </div>
+            <div class="control">
+                <input type="submit" value="Save" class="btn btn--blue-dark" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

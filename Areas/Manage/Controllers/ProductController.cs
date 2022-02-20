@@ -17,13 +17,15 @@ namespace ASMMAIN.Areas.Controllers
     {
         private readonly ShopContext _context;
 
-        [ViewData] 
-        public int num {get; set;} = 2 ;
+      
         public ProductController(ShopContext context)
         {
             _context = context;
         }
 
+
+           [ViewData]
+        public int num {get;set;} =2 ; 
         // GET: Product
         [HttpGet("/manage/product")]
         public async Task<IActionResult> Index()

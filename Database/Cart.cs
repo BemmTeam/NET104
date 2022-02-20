@@ -15,7 +15,7 @@ namespace ASMMAIN.Models
 
         [DataType(DataType.Date)]
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
-        public DateTime? created_date { get; set; }
+        public DateTime created_date { get; set; }
 
         [Required]
         public bool status { get; set; }

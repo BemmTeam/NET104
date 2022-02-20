@@ -27,7 +27,8 @@
             <div class="header_wrap">
                 <div class="header_logo">
                     <img src="/images/LEGO.png" alt="logo" class="header_logo-img" />
-                    <h1 class="header_logo-title">LEGO PRO Manage</h1>
+                                        <h1 class="header_logo-title"><a style="text-decoration: none; color:#ffff;" href="/">LEGO PRO MANAGE</a></h1>
+
                 </div>
               
 
@@ -73,14 +74,9 @@
                                     <a asp-area= "manage" asp-controller="category" asp-action="index" class="category-item_link">Quản lý danh mục</a>
                                 </li>
                                   <li class="category-item">
-                                    <a href="/signup" class="category-item_link">Quản lý giỏ hàng </a>
+                                    <a asp-area= "manage" asp-controller="cart" asp-action="index" class="category-item_link">Quản lý hoá đơn</a>
                                 </li>
-                                         <li class="category-item">
-                                    <a href="/signup" class="category-item_link">Quản lý giỏ hàng chi tiết</a>
-                                </li>
-                                  <li class="category-item">
-                                    <a href="/" class="category-item_link">Giao diện header - footer</a>
-                                </li>
+                              
                             </ul>
                         </nav>
                 </div>

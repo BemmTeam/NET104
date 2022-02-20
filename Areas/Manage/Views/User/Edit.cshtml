@@ -11,28 +11,28 @@
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div asp-validation-summary="ModelOnly" class="text--danger"></div>
           
             <div class="control">
                 <input asp-for="FullName" class="control_input" />
                 <label asp-for="FullName" class="control_label"></label>
-                <span asp-validation-for="FullName" class="text-danger"></span>
+                <span asp-validation-for="FullName" class="text--danger"></span>
             </div>
             <input type="hidden" asp-for="Id" />
             <div class="control">
                 <input asp-for="UserName" class="control_input" />
                 <label asp-for="UserName" class="control_label"></label>
-                <span asp-validation-for="UserName" class="text-danger"></span>
+                <span asp-validation-for="UserName" class="text--danger"></span>
             </div>
               <div class="control">
                 <input asp-for="HomeAddress" class="control_input" />
                 <label asp-for="HomeAddress" class="control_label"></label>
-                <span asp-validation-for="HomeAddress" class="text-danger"></span>
+                <span asp-validation-for="HomeAddress" class="text--danger"></span>
             </div>
             <div class="control">
                 <input asp-for="Email" class="control_input" />
                 <label asp-for="Email" class="control_label"></label>
-                <span asp-validation-for="Email" class="text-danger"></span>
+                <span asp-validation-for="Email" class="text--danger"></span>
             </div>
 
             <div class="control form-check">

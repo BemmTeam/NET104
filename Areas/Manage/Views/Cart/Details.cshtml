@@ -1,0 +1,50 @@
+@model ASMMAIN.Models.Cart
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Chi tiết hoá đơn</h1>
+
+<div>
+    <h4>Cart</h4>
+    <hr />
+    <div class="grid">
+        <dl class="grid_row">
+        <dt class = "grid_column-2 label--info label--title label">
+            @Html.DisplayNameFor(model => model.created_date)
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.created_date)
+        </dd>
+        <dt class = "grid_column-2 label--info label--title label">
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.status)
+        </dd>
+        <dt class = "grid_column-2 label--info label--title label">
+            @Html.DisplayNameFor(model => model.user)
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.user.Id)
+        </dd>
+        <dt class = "grid_column-2 label--info label--title label">
+            @Html.DisplayNameFor(model => model.productList)
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.productList)
+        </dd>
+        <dt class = "grid_column-2 label--info label--title label">
+            @Html.DisplayNameFor(model => model.total)
+        </dt>
+        <dd class = "grid_column-10 label label--white label--text-black">
+            @Html.DisplayFor(model => model.total)
+        </dd>
+    </dl>
+    </div>
+</div>
+<div>
+    <a class="btn btn--blue-light" asp-action="Edit" asp-route-id="@Model.cart_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

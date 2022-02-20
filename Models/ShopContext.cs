@@ -10,7 +10,6 @@ namespace ASMMAIN
         public DbSet<Category>  categories { get; set; }
         public DbSet<Cart>  carts { get; set; }
 
-        public DbSet<Invoice>  invoices { get; set; }
 
 
 

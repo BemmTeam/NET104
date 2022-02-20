@@ -99,13 +99,16 @@
 
 
 }
+.box_footer a{
+  text-decoration: none;
+}
 .product_box:hover .box_btn{ 
     display: block;
 }
 .box_btn {
     text-align: center;
     color: #FEFEFF;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     text-decoration: none;
     width: 150px; 
     border-radius: 10px;
@@ -113,6 +116,7 @@
     padding: 10px;
     display: none;
     animation: btnHover 0.2s linear ;
+    text-decoration: none;
 
 }
 .box_btn:hover{

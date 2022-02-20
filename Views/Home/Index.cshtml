@@ -22,14 +22,15 @@
                             @*  category-item-active *@
                             <ul class="category-list">
                                   <li class="category-item">
-                                    <a asp-action="index" asp-route-id=""  class="category-item_link">Tất cả sản phẩm</a>
+                                    <a asp-action="index" asp-route-id="" asp-route-num="-1" class="category-item_link">Tất cả sản phẩm</a>
                                 </li>
-                             @foreach (var item in categories)
-                             {
-                                  <li class="category-item">
-                                    <a asp-action="Index" asp-route-id="@item.category_id" class="category-item_link">@item.name</a>
+                                @for (var i = 0; i < categories.Count; i++)
+                                {
+                                     <li class="category-item">
+                                    <a asp-action="Index" asp-route-id="@categories[i].category_id" asp-route-num="@i" class="category-item_link">@categories[i].name</a>
                                 </li>
-                             }
+                                }
+                          
                             </ul>
                         </nav>
             </div>
@@ -89,7 +90,6 @@
                             </div>
                     </div>
                  }
-                 <button>a</button>
             </div>
         </div>
     </div>

@@ -92,6 +92,8 @@ namespace ASMMAIN.Controllers
         [TempData]
 
         public DateTime date {get;set;}
+
+        [Authorize]
         public async Task<IActionResult> History(string userID = null){ 
             
             List<Cart> carts;
@@ -99,7 +101,6 @@ namespace ASMMAIN.Controllers
             var user = await userManager.FindByIdAsync(userID);
         
             ViewBag.fullname = user.FullName;
-            Console.WriteLine(user.FullName);
             if(userID != null) { 
 
                  carts = await context.carts.Select(x => x).Where(x=> x.UserId == userID).OrderByDescending(x=> x.created_date).ToListAsync() ;
@@ -119,7 +120,7 @@ namespace ASMMAIN.Controllers
             var carts = SessionHelper.GetObjectFormJson<List<CartItem>>(HttpContext.Session , "cart");
             date = DateTime.Now;
             await context.AddAsync(new Cart{productList = JsonConvert.SerializeObject(carts) , created_date = date, total = totalprice,
-                UserId = userId , status = true
+                UserId = userId , status = false
             });
             await context.SaveChangesAsync();
             HttpContext.Session.Clear();

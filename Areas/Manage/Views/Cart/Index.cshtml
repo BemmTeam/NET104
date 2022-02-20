@@ -1,0 +1,55 @@
+@model IEnumerable<ASMMAIN.Models.Cart>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Danh sách Hoá đơn</h1>
+
+<p>
+    <a class="btn btn--blue-light" asp-action="Create">Tạo mới hoá đơn</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.created_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.user)
+            </th>
+         
+            <th>
+                @Html.DisplayNameFor(model => model.total)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.created_date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.user.Id)
+            </td>
+       
+            <td>
+                @Html.DisplayFor(modelItem => item.total)
+            </td>
+             <td style="display: flex;">
+                <a class="btn btn--blue-dark btn--size-sm" asp-action="Edit" asp-route-createDate="thanhe" asp-route-id="@item.cart_id">Edit</a> 
+                <a class="btn btn--blue-light btn--size-sm" asp-action="Details" asp-route-id="@item.cart_id">Details</a> 
+                <a class="btn btn--danger btn--size-sm" asp-action="Delete" asp-route-id="@item.cart_id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

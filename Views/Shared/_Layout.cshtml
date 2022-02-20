@@ -27,7 +27,7 @@
             <div class="header_wrap">
                 <div class="header_logo">
                     <img src="/images/LEGO.png" alt="logo" class="header_logo-img" />
-                    <h1 class="header_logo-title">LEGO PRO</h1>
+                    <h1 class="header_logo-title"><a style="text-decoration: none; color:#ffff;" href="/">LEGO PRO</a></h1>
                 </div>
                 <div class="header_nav">
                     <ul class="header_nav-list">
@@ -42,10 +42,10 @@
                         </li>
                     </ul>
                 </div>
-                <div class="header_search">
-                    <input class="header_search-input" type="text" placeholder="Nhập sản phẩm bạn muốn tìm" />
-                    <i class="fa fa-search header_search-icon"></i>
-                </div>
+                <form  asp-action="Index" asp-controller="Home" class="header_search">
+                    <input class="header_search-input" type="text" name="nameproduct" placeholder="Nhập sản phẩm bạn muốn tìm" />
+                    <button style="background-color: transparent;" type="submit" class="fa fa-search header_search-icon"></button>
+                </form>
 
                 <div class="header_groupuser">
                     <div class="header_cart">
@@ -186,4 +186,8 @@
     </div>
 </body>
 
+    <script>
+        var category = document.querySelectorAll(".category-item");
+        category[@ViewData["num"]].classList.add("category-item-active");
+    </script>
 </html>
