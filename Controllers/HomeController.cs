@@ -26,8 +26,9 @@ namespace ASMMAIN.Controllers
             this.userManager = _usermanager;
         }
 
-        public async Task<IActionResult> Index(int? id , string nameproduct ,int num)
+        public async Task<IActionResult> Index(int? id , string nameproduct ,int num , string Order =  "Theo tên"  , string TypeOder = "Tăng dần" )
         {
+            
             ViewData["num"] = num + 1;
              var carts = SessionHelper.GetObjectFormJson<List<CartItem>>(HttpContext.Session , "cart");
               if(carts != null) { 
@@ -40,19 +41,55 @@ namespace ASMMAIN.Controllers
             if(nameproduct != null) { 
 
                 var products = await context.products.Select(x => x).Where(x => x.name.Contains(nameproduct)).ToListAsync();
-                 return View(products);
+                 return View(FilterProduct(products,Order,TypeOder));
             }
 
             if(id == null) { 
 
-                 return View(await context.products.ToListAsync());
+                 return View( FilterProduct(await context.products.ToListAsync(), Order , TypeOder ));
 
             }else { 
+                
                 var products = await context.products.Select(x => x).Where(x => x.category_id == id).ToListAsync();
-                 return View(products);
+                 return View( FilterProduct(products, Order , TypeOder));
             }
         }
 
+        private List<Product> FilterProduct(List<Product> products,string Order , string TypeOder)  { 
+            
+             var carts = SessionHelper.GetObjectFormJson<List<CartItem>>(HttpContext.Session , "cart");
+            if(carts != null) { 
+
+                    foreach(var item in carts) { 
+
+                        foreach(var itemproduct in products) { 
+
+                            if(itemproduct.product_id == item.product.product_id) itemproduct.quantity -= item.Quantity;
+                        }
+                    }
+
+            }
+
+            if(Order.Contains("Theo giá")) { 
+
+                if(TypeOder.Contains("Tăng dần")) { 
+                    
+                    return products.OrderBy(x=> x.price).ToList();
+                }else { 
+                    return  products.OrderByDescending(x=> x.price).ToList();
+                    
+                }
+                
+            }else {
+                   if(TypeOder.Contains("Tăng dần")) { 
+                    
+                    return products.OrderBy(x=> x.name).ToList();
+                }else { 
+                    return products.OrderByDescending(x=> x.name).ToList();
+                    
+                }
+            }
+        }
         public IActionResult Privacy()
         {
             return View();
@@ -73,10 +110,23 @@ namespace ASMMAIN.Controllers
                 ViewBag.sum = carts.Sum(x=> x.Quantity);
             }
             ViewData["cart"] = carts;
+            
             if(id == null) {
                 return NotFound();
-            }else { 
-                return View(await context.products.FindAsync(id));
+            }else {
+                var product = await context.products.FindAsync(id);
+                    if(carts != null) { 
+
+                            foreach(var item in carts) { 
+
+                               
+
+                                    if(product.product_id == item.product.product_id) product.quantity -= item.Quantity;
+                                
+                            }
+
+                    }
+                return View(product);
             }
         }
 

@@ -570,7 +570,9 @@ D:\Study\net104\ASMMAIN\NET104\obj\Debug\netcoreapp3.1\Razor\Views\Cart\History.
 D:\Study\net104\ASMMAIN\NET104\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs
 D:\Study\net104\ASMMAIN\NET104\obj\Debug\netcoreapp3.1\Razor\Views\Home\detail.cshtml.g.cs
 D:\Study\net104\ASMMAIN\NET104\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+D:\Study\net104\ASMMAIN\NET104\obj\Debug\netcoreapp3.1\Razor\Views\Home\InfoUser.cshtml.g.cs
 D:\Study\net104\ASMMAIN\NET104\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+D:\Study\net104\ASMMAIN\NET104\obj\Debug\netcoreapp3.1\Razor\Views\Home\UpdateUser.cshtml.g.cs
 D:\Study\net104\ASMMAIN\NET104\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs
 D:\Study\net104\ASMMAIN\NET104\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 D:\Study\net104\ASMMAIN\NET104\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_AlertTemp.cshtml.g.cs
@@ -590,5 +592,3 @@ D:\Study\net104\ASMMAIN\NET104\obj\Debug\netcoreapp3.1\ASMMAIN.csproj.CopyComple
 D:\Study\net104\ASMMAIN\NET104\obj\Debug\netcoreapp3.1\ASMMAIN.dll
 D:\Study\net104\ASMMAIN\NET104\obj\Debug\netcoreapp3.1\ASMMAIN.pdb
 D:\Study\net104\ASMMAIN\NET104\obj\Debug\netcoreapp3.1\ASMMAIN.genruntimeconfig.cache
-D:\Study\net104\ASMMAIN\NET104\obj\Debug\netcoreapp3.1\Razor\Views\Home\InfoUser.cshtml.g.cs
-D:\Study\net104\ASMMAIN\NET104\obj\Debug\netcoreapp3.1\Razor\Views\Home\UpdateUser.cshtml.g.cs

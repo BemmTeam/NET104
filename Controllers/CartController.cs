@@ -21,6 +21,7 @@ namespace ASMMAIN.Controllers
         private readonly ShopContext context;
 
         private readonly UserManager<User> userManager;
+
         public CartController(ShopContext context , UserManager<User> userManager)
         {
             this.context = context;
@@ -77,7 +78,7 @@ namespace ASMMAIN.Controllers
             List<CartItem> carts = SessionHelper.GetObjectFormJson<List<CartItem>>(HttpContext.Session , "cart");
             int index = isExist(id);
             carts.RemoveAt(index);
-             System.Console.WriteLine(index);
+      
 
             SessionHelper.SetObjectAsJson(HttpContext.Session , "cart" , carts);
             return NoContent();
@@ -94,9 +95,10 @@ namespace ASMMAIN.Controllers
         public DateTime date {get;set;}
 
         [Authorize]
-        public async Task<IActionResult> History(string userID = null){ 
-            
+        public async Task<IActionResult> History(){ 
+
             List<Cart> carts;
+            var userID = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             var user = await userManager.FindByIdAsync(userID);
         
@@ -113,21 +115,31 @@ namespace ASMMAIN.Controllers
             }
             return View(carts);
         }
+        [Authorize]
+
         public async Task<IActionResult> SaveCart(float totalprice){
             
-            
             var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            
             var carts = SessionHelper.GetObjectFormJson<List<CartItem>>(HttpContext.Session , "cart");
             date = DateTime.Now;
             await context.AddAsync(new Cart{productList = JsonConvert.SerializeObject(carts) , created_date = date, total = totalprice,
                 UserId = userId , status = false
             });
+
+            foreach(var item in carts) { 
+
+                var product = await context.products.FindAsync(item.product.product_id);
+                product.quantity -= item.Quantity;
+                context.Update(product);
+            }
+
             await context.SaveChangesAsync();
             HttpContext.Session.Clear();
             Message = "Đặt hàng thành công vui lòng chờ nhận hàng!";
             MessageType = AlertModel.Type.success;
             
-            return RedirectToAction(nameof(History),new {userId = userId});
+            return RedirectToAction(nameof(History));
         }
     }
 }

@@ -7,7 +7,18 @@ function addCart(imgurl , name , price , product_id ){
     const cartcount = document.getElementById("carts_count") ; 
     cartcount.innerText = parseInt(cartcount.innerText) + 1;
     if(main) { 
-        
+
+        var count = document.getElementById("count-" + product_id);
+        if(parseInt(count.innerText) > 0) { 
+            count.classList.add("text-success");
+            count.innerText = parseInt(count.innerText) - 1;
+            if(parseInt(count.innerText) == 0 ) { 
+                count.classList.add("text-danger")
+                document.getElementById("btn-" + product_id).style.visibility = "hidden";
+
+                count.innerText = "Hết hàng"
+            }
+        }
         var idcheck = document.getElementById(product_id); 
         if(idcheck) { 
             var quantity = idcheck.querySelector(".product-body_info-qty");
@@ -60,15 +71,24 @@ function removeElement(id , price) {
     num.innerText = parseInt(num.innerText)  -1 ;
     const pricetitle = document.getElementById("product-body_info-total")
     const cartcount = document.getElementById("carts_count") ; 
-    const quantity = document.getElementById("product-body_info-qty");
-    console.log(quantity);
      var elem = document.getElementById(id);
      var quantitya = elem.querySelector(".product-body_info-qty");
     cartcount.innerText = parseInt(cartcount.innerText) - parseInt(quantitya.innerText);
+    console.log(quantitya);
 
 
     elem.remove();
-  
+    var count = document.getElementById("count-" + id);
+        
+    var countne = parseInt(count.innerText);
+    if(isNaN(countne)) countne = 0;
+    count.innerText =  countne + parseInt(quantitya.innerText);
+    count.classList.replace("text-danger","text-success");
+    count.classList.replace("text-success","text-success");
+
+    document.getElementById("btn-" + id).style.visibility = "visible";
+
+
 
     pricetitle.innerText = parseFloat(pricetitle.innerText) - parseFloat(price);
 

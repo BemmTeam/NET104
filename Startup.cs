@@ -46,11 +46,12 @@ namespace ASMMAIN
                 .AddEntityFrameworkStores<ShopContext>()
                 .AddDefaultTokenProviders();
           
-
+          
             // Truy cập IdentityOptions
             services.Configure<IdentityOptions>(options =>
             {
                 // Thiết lập về Password
+                
                 options.Password.RequireDigit = false; // Không bắt phải có số
                 options.Password.RequireLowercase = false; // Không bắt phải có chữ thường
                 options.Password.RequireNonAlphanumeric = false; // Không bắt ký tự đặc biệt

@@ -1,7 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
     var categories = ViewData["categories"] as List<Category> ;
-
+    string display = "";
 }
 @model List<ASMMAIN.Models.Product>
 
@@ -42,20 +42,23 @@
 
                 </div>
                 <div class="grid_column-full ">
-                    <form action="/action_page.php">
+                    <form asp-action="Index" asp-controller="Home">
                      <div class="filter">
 
-                        <div class="filter_select">
+                        <div class="filter_select form-select">
                             <select class="filter_select-input"  name="Order" id="Order">
-                                <option class="filter_select-option" value="volvo">Theo giá</option>
-                                <option class="filter_select-option" value="saab">Theo tên</option>
+                                <option class="filter_select-option" value="Theo giá"><a href="">Theo giá</a></option>
+                                <option class="filter_select-option" value="Theo tên"><a href="">Theo tên</a></option>
                             </select>
                         </div>
-                        <div class="filter_select">
-                            <select class="filter_select-input" name="Order" id="Order">
-                                <option class="filter_select-option" value="volvo">Tăng dần</option>
-                                <option class="filter_select-option" value="saab">Giảm dần</option>
+                        <div class="filter_select form-select">
+                            <select class="filter_select-input" name="TypeOder" id="Order">
+                                <option class="filter_select-option" value="Tăng dần"><a href="">Tăng dần</a></option>
+                                <option class="filter_select-option" value="Giảm dần"><a href="">Giảm dần</a></option>
                             </select>
+                        </div>
+                         <div class="filter_select">
+                            <button type="submit" style="display: block;background-color: cornflowerblue; " class="box_btn btn-primary btn--size-m">Lọc kết quả</button>
                         </div>
                      </div>
                     <hr>
@@ -78,6 +81,15 @@
                             </div>
                             <div class="box_body">
                                 <div class="box_body-name">@item.name</div>
+                                @if (@item.quantity == 0)
+                                {
+                                 <div style="font-size: 1.2rem;" class="text text-dark">Số lượng: <span class="text-danger" id="count-@item.product_id">Hết hàng</span></div>
+                                  display = "hidden";
+                                }else{ 
+                                 <div style="font-size: 1.2rem;" class="text text-dark">Số lượng: <span class="text-success" id="count-@item.product_id">@item.quantity</span></div>
+                                    display = "visible";
+                                }
+
                                 @* <div class="box_body-saleoff">20%</div>
                                     <p class="box_body-desc">thanh dep trai nhat the gioi lun a nha may ban oi co thich trai
                                     dep thi lien he minh gap di nha nha nhaaaaaaaaaaa</p> *@
@@ -86,7 +98,7 @@
                          </div>
                         </a>
                              <div class="box_footer">
-                                <a asp-action="Add" asp-controller="cart" asp-route-id="@item.product_id" onclick="addCart('/images/@item.image_url','@item.name','@item.price' , '@item.product_id')" class="box_btn">Thêm vào giỏ</a>
+                                <a style="visibility: @display;"  id="btn-@item.product_id" asp-action="Add" asp-controller="cart" asp-route-id="@item.product_id" onclick="addCart('/images/@item.image_url','@item.name','@item.price' , '@item.product_id')" class="box_btn">Thêm vào giỏ</a>
                             </div>
                     </div>
                  }

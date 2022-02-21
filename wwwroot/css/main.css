@@ -213,6 +213,7 @@
   overflow-y: auto;
   overflow-x: hidden;
   border-bottom: 1px solid #eaeaf5;
+  padding: 5px;
 }
 .products {
   padding-left: 0px;
@@ -223,7 +224,6 @@
 .product-item {
   padding: 5px 0;
   display: flex;
-  margin-left: 5px;
 }
 .product_img {
   min-width: 60px;
@@ -237,6 +237,10 @@
   min-width: 256px;
   max-width: 256px;
 
+}
+
+.product-body_info ~ a { 
+  text-decoration: none;
 }
 
 .product-body_info-title {

@@ -20,14 +20,12 @@
                         
                     }
                     <li class="header_user-menu-item"><a asp-action="InfoUser"  asp-controller="Home">Thông tin tài khoản</a></li>
-                    <li class="header_user-menu-item"><a asp-action="History" asp-area="" asp-controller="Cart" asp-route-userId="@UserManager.GetUserId(User)">Lịch sử mua hàng</a></li>
+                    <li class="header_user-menu-item"><a asp-action="History" asp-area="" asp-controller="Cart">Lịch sử mua hàng</a></li>
 
                     <li class="header_user-menu-item"><a asp-action="Signout" asp-controller="Account" asp-route-returnUrl = "@Url.Action("Index", "Home", new { area = "" })">Đăng xuất</a></li>
                 </ul>
             </div>
             </div>
-
-     
 
     </li>
     @* <li class="header_nav-list-item">
@@ -50,7 +48,3 @@ else
 </div>
 
 
-    <script>
-        var category = document.querySelectorAll(".category-item");
-        category[@ViewData["num"]].classList.add("category-item-active");
-    </script>

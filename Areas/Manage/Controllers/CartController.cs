@@ -124,13 +124,11 @@ namespace ASMMAIN.Areas.Controllers
                 {
                     if (!CartExists(cart.cart_id))
                     {
-                        Console.WriteLine($"khong vao dc 1");
 
                         return NotFound();
                     }
                     else
                     {
-                        Console.WriteLine($"khong vao dc");
 
                         throw;
                         
